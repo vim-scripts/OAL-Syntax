@@ -1,0 +1,7 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1177
+
+Provides filetype, syntax, and indenting for OAL (Object Action Language) files. OAL is used with the BridgePoint UML modeling tool available from Mentor Graphics.
+
+Files named *.oal will be automatically recognized.
+
+NOTE: At the present, the BridgePoint editor can't be fully replaced by Vim, so be sure to load changes back into the BridgePoint editor before updating any names in the model!
