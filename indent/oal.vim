@@ -18,7 +18,7 @@ setlocal indentkeys=o,=else,=elif,=end\ if,=end\ for,=end\ while
 " Set the function to do the work.
 setlocal indentexpr=GetOalIndent()
 
-function s:GetOalIndent()
+function GetOalIndent()
   let ind = indent(v:lnum)
   let lnum = prevnonblank(v:lnum - 1)
   let prevline = getline(lnum)
