@@ -18,6 +18,11 @@ setlocal indentkeys=o,=else,=elif,=end\ if,=end\ for,=end\ while
 " Set the function to do the work.
 setlocal indentexpr=GetOalIndent()
 
+" Only define the functions once.
+if exists("*GetOalIndent")
+   finish
+endif
+
 function GetOalIndent()
   let ind = indent(v:lnum)
   let lnum = prevnonblank(v:lnum - 1)
