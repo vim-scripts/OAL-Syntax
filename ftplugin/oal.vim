@@ -20,12 +20,9 @@ set cpo-=C
 let b:undo_ftplugin = "setl cin< fo< com< tw< ff<"
 	\ . "| if has('vms') | setl isk< | endif"
 
-" setlocal cindent
-
-setlocal lines=25
-setlocal columns=128
-
-setlocal tw=128
+" setlocal lines=25
+" setlocal columns=128
+" setlocal tw=128
 
 setlocal ff=unix
 

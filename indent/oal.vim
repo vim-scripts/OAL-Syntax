@@ -30,7 +30,7 @@ function GetOalIndent()
 
   "Add a shiftwidth to statements following if, else, elif,
   "while and for each statements
-  if prevline =~ '^\s*\(if\|else\|elif\|while\|for\ each\)\>'
+  if prevline =~ '^\s*\.*\(if\|else\|elif\|while\|for\ each\)\>'
      "Don't add shiftwidth if already present
      "Prevents indentkeys from adding unwanted indentions
      let pind = indent(lnum)
@@ -41,7 +41,7 @@ function GetOalIndent()
 
   "Subtract a shiftwidth from else, elif, end if, end for,
   "and end while statements
-  if getline(v:lnum) =~ '^\s*\(else\|elif\|end\s*\(if\|while\|for\)\)\>'
+  if getline(v:lnum) =~ '^\s*\.*\(else\|elif\|end\s*\(if\|while\|for\)\)\>'
     let ind = ind - &sw
   endif
 
